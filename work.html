@@ -4,21 +4,38 @@
     <meta charset="UTF-8">
     <title>my work</title>
     <link rel="stylesheet" href="semantic/semantic.min.css">
+    <style>
+        .head {
+			width: 200px;
+			height: 40px;
+			background-color:mediumblue;
+			border: 1px solid;
+			float: left;
+			text-align: center;
+			line-height: 40px;
+			margin-left: 190px;
+			color: white;
+		}
+    </style>
 </head>
 <body>
     <div id="app">
-        <div class="ui container">
-          <div class="ui hidden divider">
-              <div class="ui three item menu">
-                <router-link active-class="active" exact class="item" to="/home">首页</router-link>
-                <router-link active-class="active" class="item" :to="{name:'phone'}">新闻</router-link>
-                <router-link active-class="active" class="item" to="computer">视频</router-link>
+        <div>
+          <div>
+              <div>
+                <div class="head">
+					<router-link to="/">首页</router-link>
+				</div>
+				<div class="head">
+					<router-link to="/events">新闻</router-link>
+				</div>
+				<div class="head">
+					<router-link to="/videos">视频</router-link>
+				</div>
              </div>
           </div>
 
-          <div class="ui segment" style="padding:40px">
-            <router-view></router-view>
-            <router-view></router-view>
+          <div>
             <router-view></router-view>
           </div>
         </div>
